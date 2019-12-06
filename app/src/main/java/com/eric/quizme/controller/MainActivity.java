@@ -12,14 +12,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.eric.quizme.R;
+import com.eric.quizme.model.User;
 
 public class MainActivity extends AppCompatActivity {
     private TextView mGreetingText;
     private EditText mNameInput;
     private Button mPlayButton;
+    private User mUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mUser = new User();
         setContentView(R.layout.activity_main);
         mGreetingText = findViewById(R.id.activity_main_greeting_txt);
         mNameInput = findViewById(R.id.activity_main_name_input);
@@ -44,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
         mPlayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+            String firstname = mNameInput.getText().toString();
+            mUser.setFirstname(firstname);
             Intent gameActivity = new Intent(MainActivity.this, GameActivity.class);
             startActivity(gameActivity);
             }
