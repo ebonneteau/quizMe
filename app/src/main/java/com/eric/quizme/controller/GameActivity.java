@@ -1,10 +1,12 @@
-package com.eric.quizme;
+package com.eric.quizme.controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.eric.quizme.R;
 
 public class GameActivity extends AppCompatActivity {
 private TextView  mQuestionText;

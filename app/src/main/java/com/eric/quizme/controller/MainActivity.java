@@ -1,6 +1,5 @@
-package com.eric.quizme;
+package com.eric.quizme.controller;
 
-import androidx.annotation.IdRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.eric.quizme.R;
 
 public class MainActivity extends AppCompatActivity {
     private TextView mGreetingText;
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         mPlayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gameActivity = new Intent(MainActivity.this, GameActivity.class);
+            Intent gameActivity = new Intent(MainActivity.this, GameActivity.class);
             startActivity(gameActivity);
             }
         });
