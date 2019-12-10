@@ -31,6 +31,13 @@ private QuestionBank mQuestionBank;
         mAnswer4=findViewById(R.id.activity_game_answer4_btn);
         mQuestionBank=this.generateQuestions();
     }
+    private void displayQuestion(final Question question) {
+        mQuestionText.setText(question.getQuestion());
+        mAnswer1.setText(question.getChoiceList().get(0));
+        mAnswer2.setText(question.getChoiceList().get(1));
+        mAnswer3.setText(question.getChoiceList().get(2));
+        mAnswer4.setText(question.getChoiceList().get(3));
+    }
     private QuestionBank generateQuestions() {
         Question question1 = new Question("What is the name of the current french president?",
                 Arrays.asList("François Hollande", "Emmanuel Macron", "Jacques Chirac", "François Mitterand"),
