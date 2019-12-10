@@ -27,14 +27,14 @@ public class Question {
     }
 
     public void setChoiceList(List<String> choiceList) {
-        if (mChoiceList==null){
+        if (mChoiceList == null) {
             throw new IllegalArgumentException("Array cannot be null");
         }
         mChoiceList = choiceList;
     }
 
     public int getAnswerIndex() {
-        if (answerIndex <0 || answerIndex >= mChoiceList.size()){
+        if (answerIndex < 0 || answerIndex >= mChoiceList.size()) {
             throw new IllegalArgumentException("Answer Index is out of bound");
         }
         return mAnswerIndex;
@@ -43,6 +43,7 @@ public class Question {
     public void setAnswerIndex(int answerIndex) {
         mAnswerIndex = answerIndex;
     }
+
     @Override
     public String toString() {
         return "Question{" +
@@ -50,4 +51,5 @@ public class Question {
                 ", mChoiceList=" + mChoiceList +
                 ", mAnswerIndex=" + mAnswerIndex +
                 '}';
+    }
 }
