@@ -14,6 +14,7 @@ public class QuestionBank {
         Collections.shuffle(mQuestionList);
         mNextQuestionIndex=0;
 
+
     }
     public Question getQuestion() {
         // Ensure we loop over the questions
@@ -24,4 +25,5 @@ public class QuestionBank {
         // Please note the post-incrementation
         return mQuestionList.get(mNextQuestionIndex++);
     }
+
 }
