@@ -33,6 +33,10 @@ public class Question {
         mChoiceList = choiceList;
     }
 
+    public int getAnswerIndex() {
+        return mAnswerIndex;
+    }
+
     public void setAnswerIndex(int answerIndex) {
         if (answerIndex < 0 || answerIndex >= mChoiceList.size()) {
             throw new IllegalArgumentException("Answer Index is out of bound");
