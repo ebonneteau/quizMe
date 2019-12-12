@@ -42,7 +42,7 @@ private Question mCurrentQuestion;
         mAnswer3.setTag(2);
         mAnswer4.setTag(3);
 
-       
+
         mAnswer1.setOnClickListener(this);
         mAnswer2.setOnClickListener(this);
         mAnswer3.setOnClickListener(this);
